@@ -5,12 +5,25 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "pnpm -C play dev"
+    "dev": "pnpm -C play dev",
+    "docs:dev": "pnpm -C docs dev",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.36.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "mrm": "^4.1.14",
+    "prettier": "^2.8.4",
     "typescript": "^4.9.5",
     "vue": "^3.2.47"
   },
@@ -20,5 +33,9 @@
     "@macross/utils": "workspace:^1.0.0",
     "@vicons/ionicons5": "^0.12.0",
     "pnpm": "^7.29.1"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
