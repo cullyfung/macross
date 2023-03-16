@@ -1,0 +1,24 @@
+{
+  "name": "macross",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -C play dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "@macross/components": "workspace:^1.0.0",
+    "@macross/theme-chalk": "workspace:^1.0.0",
+    "@macross/utils": "workspace:^1.0.0",
+    "@vicons/ionicons5": "^0.12.0",
+    "pnpm": "^7.29.1"
+  }
+}

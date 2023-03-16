@@ -1,0 +1,11 @@
+dist
+node_modules
+.DS_store
+.idea
+.pnpm-debug.log*
+
+*.local
+.eslintcache
+cypress/screenshots/*
+cypress/videos/*
+tmp
