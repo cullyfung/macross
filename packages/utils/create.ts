@@ -12,15 +12,15 @@
  */
 function _bem(prefixName, blockName, elementName, modifierName) {
   if (blockName) {
-    prefixName += `-${blockName}`
+    prefixName += `-${blockName}`;
   }
   if (elementName) {
-    prefixName += `__${elementName}`
+    prefixName += `__${elementName}`;
   }
   if (modifierName) {
-    prefixName += `--${modifierName}`
+    prefixName += `--${modifierName}`;
   }
-  return prefixName
+  return prefixName;
 }
 
 /**
@@ -29,29 +29,31 @@ function _bem(prefixName, blockName, elementName, modifierName) {
  * @returns
  */
 function createBEM(prefixName: string) {
-  const b = (blockName?) => _bem(prefixName, blockName, '', '')
+  const b = (blockName?) => _bem(prefixName, blockName, '', '');
 
   const e = (elementName) =>
-    elementName ? _bem(prefixName, '', elementName, '') : ''
+    elementName ? _bem(prefixName, '', elementName, '') : '';
 
   const m = (modifierName) =>
-    modifierName ? _bem(prefixName, '', '', modifierName) : ''
+    modifierName ? _bem(prefixName, '', '', modifierName) : '';
 
   const be = (blockName, elementName) =>
-    blockName && elementName ? _bem(prefixName, blockName, elementName, '') : ''
+    blockName && elementName
+      ? _bem(prefixName, blockName, elementName, '')
+      : '';
   const bm = (blockName, modifierName) =>
     blockName && modifierName
       ? _bem(prefixName, blockName, '', modifierName)
-      : ''
+      : '';
   const em = (elementName, modifierName) =>
     elementName && modifierName
       ? _bem(prefixName, '', elementName, modifierName)
-      : ''
+      : '';
   const bem = (blockName, elementName, modifierName) =>
     blockName && elementName && modifierName
       ? _bem(prefixName, blockName, elementName, modifierName)
-      : ''
-  const is = (name, state?) => (state ? `is-${name}` : '')
+      : '';
+  const is = (name, state?) => (state ? `is-${name}` : '');
   return {
     b,
     e,
@@ -60,11 +62,11 @@ function createBEM(prefixName: string) {
     bm,
     em,
     bem,
-    is
-  }
+    is,
+  };
 }
 
 export function createNamespace(name: string) {
-  const prefixName = `z-${name}`
-  return createBEM(prefixName)
+  const prefixName = `m-${name}`;
+  return createBEM(prefixName);
 }

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import MIcon from "@macross/components/icon";
-import { AccessibilityOutline } from "@vicons/ionicons5";
+import MIcon from '@macross/components/icon';
+import { HomeOutline } from '@vicons/ionicons5';
 </script>
 
 <template>
   <div>
-    <MIcon>
-      <AccessibilityOutline></AccessibilityOutline>
+    <MIcon :size="48">
+      <HomeOutline></HomeOutline>
     </MIcon>
   </div>
 </template>
